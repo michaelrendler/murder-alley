@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murder Alley</title>
+  <meta name="description" content="Murder Alley — an immersive experience where stories come alive in the shadows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="logo" aria-label="Murder Alley Home">murder alley</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          <span class="hero-location">Los Angeles</span>
+          <span class="hero-title">Murder Alley</span>
+        </h1>
+        <div class="hero-aside">
+          <p>Step into the shadows.<br><em>Where every corner holds a story.</em></p>
+          <a href="#tickets" class="btn-primary">Get Tickets</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-inner">
+        <p class="about-lead">
+          Murder Alley is an immersive storytelling experience
+          where history, mystery, and art converge in the
+          dark corridors of Los Angeles.
+        </p>
+        <p class="about-body">
+          Walk through five curated passages, each revealing a
+          chapter of untold stories. Sound, light, and narrative
+          design transform every step into a journey through
+          time — shaped by real events, local legends, and the
+          invisible threads that connect them.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="media-section">
+      <div class="media-placeholder">
+        <div class="media-overlay">
+          <span class="media-label">murder alley</span>
+          <span class="media-subtitle">IMMERSIVE EXPERIENCE</span>
+          <span class="media-date">LOS ANGELES &nbsp;&nbsp; 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="stories">
+      <div class="stories-inner">
+        <p class="stories-text">
+          Each passage is a living archive — powered by research, oral
+          histories, and creative interpretation. Murder Alley transforms
+          forgotten narratives into visceral, multi-sensory encounters that
+          blur the line between past and present.
+        </p>
+      </div>
+    </section>
+
+    <section id="visit" class="cta-section">
+      <span class="cta-tag">Now Open</span>
+      <h2 class="cta-heading">
+        Be among the first to explore<br>
+        Murder Alley
+      </h2>
+      <a href="#tickets" class="btn-primary">Reserve Your Spot</a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <ul class="marquee-track">
+        <li>Murder Alley</li>
+        <li>Downtown Los Angeles</li>
+        <li>Immersive Experience</li>
+        <li>Five Passages</li>
+        <li>True Crime</li>
+        <li>Local Legends</li>
+        <li>Historical Narratives</li>
+        <li>Sound Design</li>
+        <li>Light Installation</li>
+        <li>Multi-Sensory</li>
+        <li>Oral Histories</li>
+        <li>Dark Corridors</li>
+        <li>Living Archive</li>
+        <li>Los Angeles</li>
+      </ul>
+      <ul class="marquee-track" aria-hidden="true">
+        <li>Murder Alley</li>
+        <li>Downtown Los Angeles</li>
+        <li>Immersive Experience</li>
+        <li>Five Passages</li>
+        <li>True Crime</li>
+        <li>Local Legends</li>
+        <li>Historical Narratives</li>
+        <li>Sound Design</li>
+        <li>Light Installation</li>
+        <li>Multi-Sensory</li>
+        <li>Oral Histories</li>
+        <li>Dark Corridors</li>
+        <li>Living Archive</li>
+        <li>Los Angeles</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <ul class="social-links">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+        <li><a href="#" aria-label="X">X</a></li>
+        <li><a href="#" aria-label="TikTok">TikTok</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+      <div class="footer-nav-columns">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+        <ul>
+          <li><a href="#tickets">Tickets</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-logo">murder alley</span>
+      <ul class="footer-legal">
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <span class="footer-copy">&copy;2025 Murder Alley. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
