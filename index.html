@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighborhood Learning Modality Map — South LA (SD2)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <h1>Natural Learning Modality Map</h1>
+      <p class="subtitle">South Los Angeles — LA County Supervisory District 2</p>
+    </header>
+
+    <div id="main-container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Overview panel -->
+          <section id="overview-panel" class="panel">
+            <h2>Phase 1: Learning Modality</h2>
+            <p class="description">
+              This map reframes NAEP assessment data to explore <em>how students
+              naturally learn</em> rather than measuring competency alone.
+              School districts are scored across four learning modalities based
+              on cross-subject NAEP performance patterns.
+            </p>
+            <div class="modality-legend">
+              <h3>Modality Legend</h3>
+              <div class="legend-item">
+                <span class="legend-color" style="background:#4285f4"></span>
+                <strong>Logical-Mathematical</strong>
+                <span class="legend-desc">Quantitative reasoning strength</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background:#ea4335"></span>
+                <strong>Linguistic</strong>
+                <span class="legend-desc">Reading/verbal comprehension strength</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background:#34a853"></span>
+                <strong>Analytical-Scientific</strong>
+                <span class="legend-desc">Scientific inquiry &amp; empirical reasoning</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-color" style="background:#fbbc04"></span>
+                <strong>Balanced/Multimodal</strong>
+                <span class="legend-desc">Even distribution across modalities</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- District detail panel (shown on click) -->
+          <section id="district-panel" class="panel hidden">
+            <button id="back-btn" class="btn-back">&larr; Back to overview</button>
+            <h2 id="district-name"></h2>
+            <div id="district-naep-data"></div>
+            <div id="modality-chart"></div>
+            <div id="district-schools"></div>
+          </section>
+
+          <!-- School detail panel (shown on school click) -->
+          <section id="school-panel" class="panel hidden">
+            <button id="school-back-btn" class="btn-back">&larr; Back to district</button>
+            <h2 id="school-name"></h2>
+            <div id="school-details"></div>
+          </section>
+        </div>
+
+        <footer id="sidebar-footer">
+          <p>
+            Data: <a href="https://nces.ed.gov/nationsreportcard/" target="_blank">NAEP</a> |
+            <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" target="_blank">Census TIGER</a> |
+            <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>
+          </p>
+        </footer>
+      </div>
+
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- Layer controls -->
+  <div id="layer-controls">
+    <h4>Layers</h4>
+    <label><input type="checkbox" id="toggle-sd2" checked> SD2 Boundary</label>
+    <label><input type="checkbox" id="toggle-districts" checked> School Districts</label>
+    <label><input type="checkbox" id="toggle-schools" checked> Schools</label>
+    <label><input type="checkbox" id="toggle-blockgroups"> Block Groups</label>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/modality.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
