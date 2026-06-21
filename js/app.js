@@ -35,8 +35,8 @@
     maxBounds: [[33.5, -118.8], [34.3, -117.8]],
   });
 
-  // Dark tile layer
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  // Light tile layer (CARTO Positron)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 19,
@@ -139,7 +139,7 @@
           weight: 2,
           opacity: 0.85,
           fillColor: color,
-          fillOpacity: 0.2,
+          fillOpacity: 0.25,
         };
       },
       onEachFeature: function (feature, layer) {
@@ -311,11 +311,11 @@
 
       blockGroupsLayer = L.geoJSON(data, {
         style: {
-          color: '#8892b0',
+          color: '#999999',
           weight: 0.5,
-          opacity: 0.5,
-          fillColor: '#8892b0',
-          fillOpacity: 0.05,
+          opacity: 0.6,
+          fillColor: '#999999',
+          fillOpacity: 0.08,
         },
         onEachFeature: function (feature, layer) {
           layer.bindTooltip('Block Group: ' + feature.properties.GEOID, {
@@ -354,7 +354,7 @@
       naepContainer.innerHTML = ModalityEngine.renderStats(entry.naep);
       chartContainer.innerHTML = ModalityEngine.renderBars(entry.profile);
     } else {
-      naepContainer.innerHTML = '<p style="color:#8892b0">No NAEP data available for this district</p>';
+      naepContainer.innerHTML = '<p style="color:#666666">No NAEP data available for this district</p>';
       chartContainer.innerHTML = '';
     }
 
@@ -368,7 +368,7 @@
 
     const schools = schoolsInView.slice(0, 50); // Limit display
     if (schools.length === 0) {
-      html += '<p style="color:#8892b0;font-size:0.82rem">Loading schools from OpenStreetMap…</p>';
+      html += '<p style="color:#666666;font-size:0.82rem">Loading schools from OpenStreetMap…</p>';
     }
 
     for (const feat of schools) {
@@ -430,8 +430,8 @@
 
     // Show the NAEP context (the state/district-level data that applies)
     html += '<div style="margin-top:16px">';
-    html += '<h3 style="font-size:0.9rem;color:#ccd6f6;margin-bottom:8px">NAEP Context (District/State Level)</h3>';
-    html += '<p style="font-size:0.78rem;color:#8892b0;line-height:1.5">';
+    html += '<h3 style="font-size:0.9rem;color:#333333;margin-bottom:8px">NAEP Context (District/State Level)</h3>';
+    html += '<p style="font-size:0.78rem;color:#666666;line-height:1.5">';
     html += 'NAEP scores are reported at the state and large-district level. ';
     html += 'For schools within LAUSD, the NAEP TUDA (Trial Urban District Assessment) ';
     html += 'data for Los Angeles is used. For other districts, California state data applies.';
