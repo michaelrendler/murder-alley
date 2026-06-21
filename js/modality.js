@@ -144,7 +144,7 @@ const ModalityEngine = (function () {
    * Render a modality bar chart as HTML.
    */
   function renderBars(profile) {
-    if (!profile) return '<p style="color:#8892b0">No data available</p>';
+    if (!profile) return '<p style="color:#666666">No data available</p>';
 
     const modalities = ['logical', 'linguistic', 'scientific', 'balanced'];
     let html = '<div class="modality-bars"><h3>Learning Modality Profile</h3>';
