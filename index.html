@@ -66,6 +66,15 @@
             <h2 id="school-name"></h2>
             <div id="school-details"></div>
           </section>
+
+          <!-- Block group selection panel -->
+          <section id="selection-panel" class="panel hidden">
+            <button id="selection-back-btn" class="btn-back">&larr; Back to overview</button>
+            <h2>Block Group Selection</h2>
+            <div id="selection-summary">
+              <p style="color:#666;font-size:0.82rem">Click a block group to select it. Ctrl+Click to add more. Use the window select tool to drag-select multiple.</p>
+            </div>
+          </section>
         </div>
 
         <footer id="sidebar-footer">
@@ -87,7 +96,10 @@
     <label><input type="checkbox" id="toggle-sd2" checked> SD2 Boundary</label>
     <label><input type="checkbox" id="toggle-districts" checked> School Districts</label>
     <label><input type="checkbox" id="toggle-schools" checked> Schools</label>
-    <label><input type="checkbox" id="toggle-blockgroups"> Block Groups</label>
+    <label><input type="checkbox" id="toggle-blockgroups" checked> Block Groups</label>
+    <hr style="border:none;border-top:1px solid #dde1e6;margin:6px 0">
+    <button id="window-select-btn" class="btn-tool">Window Select</button>
+    <button id="clear-selection-btn" class="btn-tool">Clear Selection</button>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
